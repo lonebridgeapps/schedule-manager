@@ -1,0 +1,24 @@
+.container {
+   height: auto;
+   overflow: hidden;
+}
+
+.right-content {
+    width: auto;
+    float: right;
+}
+
+.left-content {
+    width: auto;
+    float: left;
+}
+
+.content {
+    float: none;
+    width: auto;
+    overflow: hidden;
+}
+
+.clear-float {
+    clear: both;
+}

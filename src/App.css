@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+  position: "fixed";
+  top: 0;
+  left: 300;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-body {
+  font-size: medium;
+}
+
+.App-form{
+  padding: 10px;
+}
+
+.App-form__people-container{
+  width: 300px;
+  text-align: center;
+}
+
+.App-form__shift-container{
+  width: 300px;
+}
+
+.App-form__container{
+  margin: 10px;
+  padding: 10px;
+}
+
+.App-form__input-label{
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.App-form__input-field{
+  width:100%;
+  text-align: left;
+}
+
+.App-form__validation-messaging{
+  color: #f00;
+  font-weight: bold;
+  font-size: 1em;
+  font-family: Cambria;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
