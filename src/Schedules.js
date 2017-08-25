@@ -15,13 +15,14 @@ class Schedules extends Component {
   componentDidMount = () => {
     console.log('schedule component did mount called');
     this.getFirebasePeople();
+    this.getFirebaseShifts();
   }
 
   getFirebaseShifts = () => {
     const noData = {"testKey": {name: "no shifts available"}};
     fire.database().ref().child('shifts/').on('value', snapshot => {
       let shiftsData = (snapshot.val() !== null) ? snapshot.val() : noData;
-      this.setState({shifts: shiftsData}, this.buildSchedule(shiftsData));
+      this.setState({shifts: shiftsData});
     })
   }
 
@@ -29,7 +30,7 @@ class Schedules extends Component {
     const noData = {"testKey": {name: "no people available"}};
     fire.database().ref().child('people/').on('value', snapshot => {
       let peopleData = (snapshot.val() !== null) ? snapshot.val() : noData;
-      this.setState({people: peopleData}, this.getFirebaseShifts());
+      this.setState({people: peopleData});
     })
   }
 

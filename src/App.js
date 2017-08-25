@@ -9,9 +9,6 @@ import Schedules from './Schedules';
 
 import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
 
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
 
 class App extends Component {
 
@@ -33,7 +30,6 @@ class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider>
         <div className="App">
           <Router>
             <div className="container">
@@ -68,7 +64,6 @@ class App extends Component {
             </div>
           </Router>
         </div>
-      </MuiThemeProvider>
     )
   }
 }

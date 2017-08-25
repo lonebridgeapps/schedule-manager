@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import fire from '../fire';
-import FlatButton from 'material-ui/FlatButton';
-import TextField from 'material-ui/TextField'
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
 
 const style = {
   margin: 12,
@@ -42,10 +38,10 @@ class FormPeople extends Component {
         <form onSubmit={this.handleSubmit} className="App-form">
 
           <div className="App-form__input-field">
-            <TextField
+            <input
               name="name"
-              hintText="Name"
-              floatingLabelText="Name"
+              type="text"
+              placeholder="Name"
               value={this.state.name}
               onChange={this.handleInputChange}
               required
@@ -53,11 +49,10 @@ class FormPeople extends Component {
           </div>
 
           <div className="App-form__input-field">
-            <TextField
+            <input
               name="email"
               type="email"
-              hintText="Email"
-              floatingLabelText="Email"
+              placeholder="Email"
               value={this.state.email}
               onChange={this.handleInputChange}
               required
@@ -65,19 +60,18 @@ class FormPeople extends Component {
           </div>
 
           <div className="App-form__input-field">
-            <SelectField
+            <select
               name="job"
-              floatingLabelText="Job"
               value={this.state.job}
               onChange={this.handleSelectChange}
             >
-              <MenuItem value={1} primaryText="Server" />
-              <MenuItem value={2} primaryText="Bartender" />
-              <MenuItem value={3} primaryText="Hostess" />
-            </SelectField>
+              <option value={1} primaryText="Server" />
+              <option value={2} primaryText="Bartender" />
+              <option value={3} primaryText="Hostess" />
+            </select>
           </div>
 
-          <FlatButton type="submit" style={style} label="Add Person"></FlatButton>
+          <button type="submit" style={style}>Add Person</button>
 
           <p className="App-form__validation-messaging"></p>
         </form>

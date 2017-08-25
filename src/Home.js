@@ -11,11 +11,15 @@ class Home extends Component {
 
         <div>
           <form name="frmLogin">
-            <label htmlFor="txtEmail">Username</label>
-            <input type="email" name="txtEmail" placeholder="Email Address" required />
+            <div>
+              <label htmlFor="txtEmail">Username</label>
+              <input type="email" name="txtEmail" placeholder="Email Address" required />
+            </div>
 
-            <label htmlFor="txtPassword">Password</label>
-            <input type="password" name="txtPassword" placeholder="Password" required />
+            <div>
+              <label htmlFor="txtPassword">Password</label>
+              <input type="password" name="txtPassword" placeholder="Password" required />
+            </div>
 
             <button type="submit" name="btnSubmit">Submit</button>
           </form>

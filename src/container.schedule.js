@@ -1,25 +1,47 @@
 import React from 'react';
 import './layout.css';
 
-import Paper from 'material-ui/Paper';
-
-import HeaderBar from './headerBar.js';
 import TableSchedules from './table.schedule';
 
-import SelectShift from './select.shift';
 
 const ScheduleContainer = (props) =>{
     return(
-        <Paper zDepth={1}>
-            <HeaderBar title="Manage Scheduled" showIcon={false} />
+        <div>
+            <h2>Manage Scheduled</h2>
         
             <div className="container">
+                <div>
+                    <button type="button" name="btnCreateSchedule">Create Schedule</button>
+                    <input type="text" name="scheduleFilter" placeholder="filter schedules by name" />
+                    <button type="button" name="btnScheduleFilter">Search</button>
+                </div>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Schedule Name</th>
+                                <th>Created Date</th>
+                                <th>Last Updated</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>    
+
                 <TableSchedules 
                     people={props.people} 
                     shifts={props.shifts} 
                     handleShiftSelectChange={props.handleShiftSelectChange} />
             </div>
-        </Paper>
+        </div>
     );
 }
 

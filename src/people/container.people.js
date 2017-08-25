@@ -2,15 +2,13 @@ import React from 'react';
 import '../layout.css';
 import './people.css';
 
-import HeaderBar from '../headerBar';
 import FormPeople from './form.people';
 import ListPeople from './list.people';
-import Paper from 'material-ui/Paper';
 
 const PeopleContainer = (props) =>{
     return(
-        <Paper zDepth={1}>
-            <HeaderBar title="Manage People" showIcon={false}/>
+        <div>
+            <h2>Manage People</h2>
 
             <div className="container">
 
@@ -23,7 +21,7 @@ const PeopleContainer = (props) =>{
                 </div>
 
             </div>
-        </Paper>
+        </div>
     );
 }
 

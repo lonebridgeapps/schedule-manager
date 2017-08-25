@@ -3,12 +3,6 @@ import React, { Component } from 'react';
 import './form.css';
 import fire from './fire';
 
-import FlatButton from 'material-ui/FlatButton';
-
-import TextField from 'material-ui/TextField';
-import TimePicker from 'material-ui/TimePicker';
-import Snackbar from 'material-ui/Snackbar';
-
 const style = {
     margin: 12,
 };
@@ -75,10 +69,10 @@ class FormShift extends Component {
         <form onSubmit={this.handleSubmit} className="App-form">
 
           <div className="App-form__input-field">
-            <TextField
+            <input 
+              type="text"
               name="name"
-              hintText="Name"
-              floatingLabelText="Name"
+              placeholder="Name"
               value={this.state.name}
               onChange={this.handleInputChange}
               required
@@ -86,11 +80,10 @@ class FormShift extends Component {
           </div>
 
           <div className="App-form__input-field">
-            <TextField
+            <input
               name="nickname"
               type="text"
-              hintText="Short Description"
-              floatingLabelText="Schedule Short Description"
+              placeholder="Short Description"
               value={this.state.nickname}
               onChange={this.handleInputChange}
               required
@@ -98,31 +91,24 @@ class FormShift extends Component {
           </div>
 
           <div className="App-form__input-field">
-            <TimePicker 
+            {/*<TimePicker 
                 format='ampm'
                 minutesStep={5}
                 pedantic={true}
                 hintText='ShiftStartTime'
-                onChange={this.handleChangeTimePicker_Start} />
+                onChange={this.handleChangeTimePicker_Start} />*/}
           </div>
 
           <div className="App-form__input-field">
-            <TimePicker 
+            {/*<TimePicker 
                 format="ampm"
                 minutesStep={5}
                 pedantic={true}
                 hintText="ShiftEndTime"
-                onChange={this.handleChangeTimePicker_End} />
+                onChange={this.handleChangeTimePicker_End} />*/}
           </div>
 
-          <FlatButton type="submit" style={style} label="Add Shift"></FlatButton>
-
-          <Snackbar
-            open={this.state.open}
-            message="Successfully added shift."
-            autoHideDuration={3000}
-            onRequestClose={this.handleRequestClose}
-            />
+          <button type="submit" style={style}>Add Shift</button>
 
           <p className="App-form__validation-messaging"></p>
         </form>

@@ -1,38 +1,29 @@
 import React from 'react';
 
-import {
-  Table,
-  TableBody,
-  TableHeader,
-  TableHeaderColumn,
-  TableRow,
-  TableRowColumn,
-} from 'material-ui/Table';
-
 const TableShift = (props) => {
     return(
         <div>
-            <Table>
-                <TableHeader>
-                    <TableRow>
-                        <TableHeaderColumn>Name</TableHeaderColumn>
-                        <TableHeaderColumn>Nickname</TableHeaderColumn>
-                        <TableHeaderColumn>Start Time</TableHeaderColumn>
-                        <TableHeaderColumn>End Time</TableHeaderColumn>
-                    </TableRow>
-                </TableHeader>
-                <TableBody>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Nickname</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                    </tr>
+                </thead>
+                <tbody>
                     {Object.keys(props.shifts).map(key => {
-                     return <TableRow key = {key}>
-                                <TableRowColumn>{props.shifts[key].name}</TableRowColumn>
-                                <TableRowColumn>{props.shifts[key].nickname}</TableRowColumn>
-                                <TableRowColumn>{props.shifts[key].start}</TableRowColumn>
-                                <TableRowColumn>{props.shifts[key].end}</TableRowColumn>
-                            </TableRow>
+                     return <tr key = {key}>
+                                <td>{props.shifts[key].name}</td>
+                                <td>{props.shifts[key].nickname}</td>
+                                <td>{props.shifts[key].start}</td>
+                                <td>{props.shifts[key].end}</td>
+                            </tr>
                     })}
                     
-                </TableBody>
-            </Table>
+                </tbody>
+            </table>
 
         </div>
     );

@@ -1,21 +1,16 @@
 import React from 'react';
 
-import Avatar from 'material-ui/Avatar';
-import {List, ListItem} from 'material-ui/List';
-
 const ListPeople = (props) => {
     return(
         <div>
-            <List>
+            <ul>
                 {Object.keys(props.people).map(key => {
-                     return <ListItem key = {key}
-                            primaryText={props.people[key].name}
-                            secondaryText={props.people[key].email} 
-                            leftAvatar={<Avatar src= {props.people[key].avatar_url} />} 
-                        />
+                     return <li key = {key}>
+                                {props.people[key].name}<br/>
+                                {props.people[key].email} 
+                            </li>
                     })}
-                
-            </List>
+            </ul>
         </div>
     );
 }
