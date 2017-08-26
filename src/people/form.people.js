@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import fire from '../fire';
 
+import '../styles/common.css';
+
 const style = {
   margin: 12,
 };
@@ -38,9 +40,11 @@ class FormPeople extends Component {
         <form onSubmit={this.handleSubmit} className="App-form">
 
           <div className="App-form__input-field">
+            <label htmlFor="name" className="text-label">Name</label>
             <input
               name="name"
               type="text"
+              className="text-input"
               placeholder="Name"
               value={this.state.name}
               onChange={this.handleInputChange}
@@ -49,9 +53,11 @@ class FormPeople extends Component {
           </div>
 
           <div className="App-form__input-field">
+            <label htmlFor="email" className="text-label">Email</label>
             <input
               name="email"
               type="email"
+              className="text-input"
               placeholder="Email"
               value={this.state.email}
               onChange={this.handleInputChange}
@@ -60,18 +66,32 @@ class FormPeople extends Component {
           </div>
 
           <div className="App-form__input-field">
+            <label htmlFor="job" className="text-label">Job Title</label>
             <select
               name="job"
+              className="text-input"
               value={this.state.job}
               onChange={this.handleSelectChange}
             >
-              <option value={1} primaryText="Server" />
-              <option value={2} primaryText="Bartender" />
-              <option value={3} primaryText="Hostess" />
+              <option value={1} label="Server" />
+              <option value={2} label="Bartender" />
+              <option value={3} label="Hostess" />
             </select>
           </div>
 
-          <button type="submit" style={style}>Add Person</button>
+          <div className="App-form__input-field">
+            <label htmlFor="startDate" className="text-label">Start Date</label>
+            <input
+              name="startDate"
+              type="date"
+              className="text-input"
+              placeholder="Start Date"
+              value={this.state.startDate}
+              onChange={this.handleInputChange}
+            />
+          </div>
+
+          <button type="submit" className="button">Add Person</button>
 
           <p className="App-form__validation-messaging"></p>
         </form>

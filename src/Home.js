@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
-import './layout.css';
+import './styles/App.css';
+import './styles/layout.css';
+import './styles/common.css';
 
 class Home extends Component {
 
@@ -12,16 +13,16 @@ class Home extends Component {
         <div>
           <form name="frmLogin">
             <div>
-              <label htmlFor="txtEmail">Username</label>
-              <input type="email" name="txtEmail" placeholder="Email Address" required />
+              <label htmlFor="txtEmail" className="text-label">Username</label>
+              <input type="email" name="txtEmail" className="text-input" placeholder="Email Address" required />
             </div>
 
             <div>
               <label htmlFor="txtPassword">Password</label>
-              <input type="password" name="txtPassword" placeholder="Password" required />
+              <input type="password" name="txtPassword" className="text-input" placeholder="Password" required />
             </div>
 
-            <button type="submit" name="btnSubmit">Submit</button>
+            <button type="submit" name="btnSubmit" className="button">Submit</button>
           </form>
         </div>
       </div>

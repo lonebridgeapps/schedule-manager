@@ -1,0 +1,45 @@
+/* button */
+.button {
+    padding: 10px 12px;
+
+    font-weight: bold;
+    color: white;
+    background-color: #006bb3;
+
+    border: none;
+}
+
+/* input */
+.text-input {
+    margin: 5px;
+    padding: 8px;
+
+    width: 100%;
+}
+
+/* label */
+.text-label {
+    font-weight: bold;
+
+}
+
+/* table */
+table {
+    width: 100%;
+    font-size: 0.9em;
+    border-spacing: 0;
+}
+
+th {
+    font-weight: bold;
+    padding: 15px;
+
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+    background-color: #ddd;
+}
+
+td {
+    border-bottom: solid 1px #ccc;
+    padding: 15px;
+}

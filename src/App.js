@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
-import './layout.css';
+import './styles/App.css';
+import './styles/layout.css';
+import './styles/NavMenu.css';
 
 import Home from './Home';
 import People from './People';
 import Shifts from './Shifts';
 import Schedules from './Schedules';
+import SchedulesNew from './Schedules.New';
 
 import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
 
@@ -34,18 +36,18 @@ class App extends Component {
           <Router>
             <div className="container">
                 <div className="left-content">
-                    <div style={{height: "100vh", width: "300px"}}>
-                        <h3 style={{padding: "10px 20px"}}>Schedule Manager</h3>
-                        <ul>
-                            <li style={{padding: "10px"}} >
+                    <div className="sideMenu" >
+                        <h3>Schedule Manager</h3>
+                        <ul className="sideNavBar">
+                            <li >
                                 <Link to="/people" >People</Link>
                             </li>
-                            <hr />
-                            <li style={{padding: "10px"}}>
+                            
+                            <li>
                                 <Link to="/shifts">Shifts</Link>
                             </li>
-                            <hr />
-                            <li style={{padding: "10px"}}>
+                            
+                            <li>
                                 <Link to="/schedules" >Schedules</Link>
                             </li>
                         </ul>
@@ -58,6 +60,7 @@ class App extends Component {
                         <Route path="/people" component={ People } />
                         <Route path="/shifts" component={ Shifts } />
                         <Route path="/schedules" component={ Schedules } />
+                        <Route path="/schedules/new" component={ SchedulesNew} />
                     </div>
                 </div>
               

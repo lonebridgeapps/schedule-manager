@@ -1,0 +1,23 @@
+.sideMenu {
+    height: 100vh; 
+    width: 200px;
+    background-color: #000;
+    color: #ccc;
+    overflow-y: none;
+}
+
+ul.sideNavBar {
+    list-style: none;
+}
+
+ul.sideNavBar li {
+    padding: 20px;
+}
+
+ul.sideNavBar li a{
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    color: #ccc;
+}

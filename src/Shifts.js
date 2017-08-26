@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-import './layout.css';
+import './styles/App.css';
+import './styles/layout.css';
 
 import fire from './fire';
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import '../layout.css';
+import '../styles/layout.css';
 import './people.css';
 
 import FormPeople from './form.people';
-import ListPeople from './list.people';
+import TablePeople from './table.people';
 
 const PeopleContainer = (props) =>{
     return(
@@ -11,12 +11,12 @@ const PeopleContainer = (props) =>{
             <h2>Manage People</h2>
 
             <div className="container">
-
-                <div className="right-content">
-                    <ListPeople people={props.people} />
+                
+                <div className="content-60 panel">
+                    <TablePeople people={props.people} />
                 </div>
                 
-                <div className="content">
+                <div className="content-30 panel">
                     <FormPeople onSubmit={this.insertPerson} />
                 </div>
 

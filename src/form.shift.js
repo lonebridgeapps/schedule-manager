@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-import './form.css';
+import './styles/form.css';
+import './styles/common.css';
+
 import fire from './fire';
 
 const style = {
@@ -69,9 +71,11 @@ class FormShift extends Component {
         <form onSubmit={this.handleSubmit} className="App-form">
 
           <div className="App-form__input-field">
+            <label htmlFor="name" className="text-label">Name</label>
             <input 
               type="text"
               name="name"
+              className="text-input"
               placeholder="Name"
               value={this.state.name}
               onChange={this.handleInputChange}
@@ -80,9 +84,11 @@ class FormShift extends Component {
           </div>
 
           <div className="App-form__input-field">
+            <label htmlFor="nickname" className="text-label">Short Description</label>
             <input
               name="nickname"
               type="text"
+              className="text-input"
               placeholder="Short Description"
               value={this.state.nickname}
               onChange={this.handleInputChange}
@@ -108,7 +114,7 @@ class FormShift extends Component {
                 onChange={this.handleChangeTimePicker_End} />*/}
           </div>
 
-          <button type="submit" style={style}>Add Shift</button>
+          <button type="submit" className="button">Add Shift</button>
 
           <p className="App-form__validation-messaging"></p>
         </form>

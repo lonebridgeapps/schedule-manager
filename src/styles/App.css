@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .App {
+  font-family: Roboto;
   text-align: center;
-  position: "fixed";
   top: 0;
-  left: 300;
+  left: 300px;
 }
 
 .App-logo {
@@ -31,7 +33,7 @@
 }
 
 .App-form__shift-container{
-  width: 300px;
+  width: 250px;
 }
 
 .App-form__container{

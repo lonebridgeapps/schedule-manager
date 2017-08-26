@@ -3,69 +3,43 @@ import React, { Component } from 'react';
 import fire from './fire';
 
 import ScheduleContainer from './container.schedule';
+import FormSchedule from './form.schedule';
 
 class Schedules extends Component {
 
-  state = {
-    people: [],
-    shifts: [],
-    isDrawerOpen: false,
-  };
-
-  componentDidMount = () => {
-    console.log('schedule component did mount called');
-    this.getFirebasePeople();
-    this.getFirebaseShifts();
-  }
-
-  getFirebaseShifts = () => {
-    const noData = {"testKey": {name: "no shifts available"}};
-    fire.database().ref().child('shifts/').on('value', snapshot => {
-      let shiftsData = (snapshot.val() !== null) ? snapshot.val() : noData;
-      this.setState({shifts: shiftsData});
-    })
-  }
-
-  getFirebasePeople = () => {
-    const noData = {"testKey": {name: "no people available"}};
-    fire.database().ref().child('people/').on('value', snapshot => {
-      let peopleData = (snapshot.val() !== null) ? snapshot.val() : noData;
-      this.setState({people: peopleData});
-    })
-  }
-
-  buildSchedule = (shifts) => {
-    var weekStartDate = new Date();
-    // var shifts = this.state.shifts;
-
-    //generate shift availability
-    var arrShifts = [];
-    console.log(shifts);
-    {Object.keys(shifts).map(key => {
-        return arrShifts.push(shifts[key]);
-    })}
-    console.log(arrShifts);
-
-    {Object.keys(this.state.people).map(key => {
-        return this.state.people[key].shifts = arrShifts;
-    })}
-
-    console.log('people obj', this.state.people);
-  }
-
-  handleShiftSelectChange = (event, index, value) => {
-      console.log("event", event);
-      console.log("index", index);
-      console.log("value", value);
-  }
-
   render() {
     return (
-        <ScheduleContainer
-          people={this.state.people} 
-          shifts={this.state.shifts}
-          handleShiftSelectChange={this.handleShiftSelectChange.bind(this)}
-        />
+        <div>
+            <h2>Manage Schedules</h2>
+        
+            <div className="container">
+                <div className="content-60 panel">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Schedule Name</th>
+                                    <th>Created Date</th>
+                                    <th>Last Updated</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+
+                <div className="content-30 panel">
+                    <FormSchedule />
+                </div>
+            </div>
+            
+        </div>
     )
   }
 }

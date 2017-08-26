@@ -1,8 +1,5 @@
 import React from 'react';
 
-import {List, ListItem} from 'material-ui/List';
-import Divider from 'material-ui/Divider';
-
 import Home from './Home';
 import People from './People';
 import Shifts from './Shifts';
