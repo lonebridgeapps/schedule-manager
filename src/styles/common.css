@@ -9,6 +9,11 @@
     border: none;
 }
 
+.button:active {
+    color: #ddd;
+    background-color: #005c99;
+}
+
 /* input */
 .text-input {
     margin: 5px;

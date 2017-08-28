@@ -35,7 +35,7 @@ class App extends Component {
         <div className="App">
           <Router>
             <div className="container">
-                <div className="left-content">
+                <div className="left-content left-content--naveMenu">
                     <div className="sideMenu" >
                         <h3>Schedule Manager</h3>
                         <ul className="sideNavBar">
