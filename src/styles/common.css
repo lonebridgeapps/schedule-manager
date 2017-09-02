@@ -14,6 +14,25 @@
     background-color: #005c99;
 }
 
+/* button link */
+.linkButton {
+    text-decoration: none;
+    padding: 10px 12px;
+
+    font-size: .9em;
+    font-weight: bold;
+    color: white;
+    background-color: #006bb3;
+
+    border: none;
+}
+
+.linkButton:active {
+    color: #ddd;
+    background-color: #005c99;
+}
+
+
 /* input */
 .text-input {
     margin: 5px;
@@ -26,6 +45,19 @@
 .text-label {
     font-weight: bold;
 
+}
+
+/* select */
+.select-text {
+    margin: 5px;
+    padding: 8px;
+
+    width: 100%;
+}
+
+/* option */
+.option-text{
+    font-size: 1em;
 }
 
 /* table */

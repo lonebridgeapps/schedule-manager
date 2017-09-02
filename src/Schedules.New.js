@@ -35,7 +35,7 @@ class SchedulesNew extends Component {
   }
 
   handleShiftSelectChange = (event, index, value) => {
-      console.log("event", event);
+      console.log("event", event.target.value);
       console.log("index", index);
       console.log("value", value);
   }
@@ -52,9 +52,9 @@ class SchedulesNew extends Component {
 
                 <div className="panel">
                     <TableSchedules 
-                        people={this.props.people} 
-                        shifts={this.props.shifts} 
-                        handleShiftSelectChange={this.props.handleShiftSelectChange} />
+                        people={this.state.people} 
+                        shifts={this.state.shifts} 
+                        handleShiftSelectChange={this.handleShiftSelectChange} />
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@
 }
 
 .App-form__people-container{
-  width: 300px;
+  /*width: 300px;*/
   text-align: center;
 }
 
@@ -49,6 +49,7 @@
 .App-form__input-field{
   width:100%;
   text-align: left;
+  padding: 5px;
 }
 
 .App-form__validation-messaging{

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
 
 import fire from './fire';
 
@@ -6,6 +7,14 @@ import ScheduleContainer from './container.schedule';
 import FormSchedule from './form.schedule';
 
 class Schedules extends Component {
+    componentDidMount = () => {
+        
+    }
+
+    handleClickRedirect = () => {
+        console.log("rediect to Schedules New");
+        this.history.push('/schedules/new');
+    }
 
   render() {
     return (
@@ -16,7 +25,7 @@ class Schedules extends Component {
                 <div className="content">
 
                   <div className="panel">
-                    <button type="button" className="button panel-button--left">Create Schedule</button>
+                    <Link className="linkButton panel-button--left" to="/schedules/new" >Create Schedule</Link>
                   </div>
                   <div className="panel">
                       <table>
