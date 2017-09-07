@@ -14,21 +14,21 @@ import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
 
 class App extends Component {
 
-  insertPerson = (personInfo) => {
-    this.setState(prevState => ({
-      cards: prevState.card.concat(personInfo)
-    }));
-  };
+  // insertPerson = (personInfo) => {
+  //   this.setState(prevState => ({
+  //     cards: prevState.card.concat(personInfo)
+  //   }));
+  // };
 
-  openDrawer = (event) => {
-    event.preventDefault();
-    this.setState({isDrawerOpen: true});
-  }
+  // openDrawer = (event) => {
+  //   event.preventDefault();
+  //   this.setState({isDrawerOpen: true});
+  // }
 
-  closeDrawer = (event) => {
-    event.preventDefault();
-    this.setState({isDrawerOpen: false});
-  }
+  // closeDrawer = (event) => {
+  //   event.preventDefault();
+  //   this.setState({isDrawerOpen: false});
+  // }
 
   render() {
     return (
