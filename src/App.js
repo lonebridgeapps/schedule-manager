@@ -4,7 +4,7 @@ import './styles/layout.css';
 import './styles/NavMenu.css';
 
 import Home from './Home';
-import People from './People';
+import PeoplePage from './PeoplePage';
 import Shifts from './Shifts';
 import Schedules from './Schedules';
 import SchedulesNew from './Schedules.New';
@@ -57,7 +57,7 @@ class App extends Component {
                 <div className="content">
                     <div className="clear-float">
                         <Route exact path="/" component={ Home } />
-                        <Route path="/people" component={ People } />
+                        <Route path="/people" component={ PeoplePage } />
                         <Route path="/shifts" component={ Shifts } />
                         <Route path="/schedules" component={ Schedules } />
                         <Route path="/schedules/new" component={ SchedulesNew} />

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import fire from './fire';
 
-import ScheduleContainer from './container.schedule';
-import FormSchedule from './form.schedule';
+// import ScheduleContainer from './container.schedule';
+// import FormSchedule from './form.schedule';
 
 class Schedules extends Component {
 

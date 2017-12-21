@@ -3,10 +3,6 @@ import fire from '../fire';
 
 import '../styles/common.css';
 
-const style = {
-  margin: 12,
-};
-
 class FormPeople extends Component {
   state = {name: '', email:'', job: 1};
 

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import fire from './fire';
-
 import TableSchedules from './table.schedule';
 
 class SchedulesNew extends Component {
