@@ -50,7 +50,7 @@ class Schedules extends Component {
                 <div className="content">
 
                   <div className="panel">
-                    <Link className="linkButton panel-button--left" to="/schedules/new" >Create Schedule</Link>
+                    <Link className="linkButton panel-button--left" to="/scheduleCreate" >Create Schedule</Link>
                   </div>
                   <div className="panel">
                       <table>

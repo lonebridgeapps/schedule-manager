@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/layout.css';
-import './people.css';
+import '../styles/people.css';
 
 import FormPeople from './form.people';
 import TablePeople from './table.people';
@@ -12,11 +12,11 @@ const PeopleContainer = (props) =>{
 
             <div className="container">
                 
-                <div className="content-60 panel">
+                <div className="panel content-60">
                     <TablePeople people={props.people} />
                 </div>
                 
-                <div className="content-30 panel">
+                <div className="panel content-30">
                     <FormPeople onSubmit={this.insertPerson} />
                 </div>
 

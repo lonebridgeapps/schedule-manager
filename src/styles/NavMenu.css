@@ -4,23 +4,30 @@
     overflow-y: none;
 }
 
-ul.sideNavBar {
-    list-style: none;
-}
-
-ul.sideNavBar li {
-    padding: 20px;
-}
-
-ul.sideNavBar li:hover {
-    color: #ccc;
-    background-color: #006bb3;
-}
-
-ul.sideNavBar li a{
+.sideMenu__item {
     text-decoration: none;
     text-align: center;
     font-weight: bold;
     font-size: 1em;
     color: #fff;
+    padding: 20px;
+}
+
+.sideMenu div:hover {
+    color: #ccc;
+    background-color: #006bb3;
+}
+
+.sideMenu div a{
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    color: #fff;
+}
+
+@media screen and (max-width: 480px){
+    .sideMenu {
+        display: none;
+    }
 }

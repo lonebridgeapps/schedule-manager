@@ -12,6 +12,7 @@ const Routes = () =>{
         <Route name="people" path="/people" component={People} />
         <Route name="shifts" path="/shifts" component={Shifts} />
         <Route name="schedule" path="/schedule" component={Schedules} />
+        <Route name="scheduleCreate" path="/scheduleCreate" component={SchedulesCreate} />
     </Router>
 };
 

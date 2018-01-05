@@ -41,15 +41,10 @@
   padding: 10px;
 }
 
-.App-form__input-label{
-  font-weight: bold;
-  padding-right: 5px;
-}
-
 .App-form__input-field{
   width:100%;
   text-align: left;
-  padding: 5px;
+  padding: 10px 5px;
 }
 
 .App-form__validation-messaging{

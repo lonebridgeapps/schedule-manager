@@ -7,6 +7,7 @@
     background-color: #006bb3;
 
     border: none;
+    cursor: pointer;
 }
 
 .button:active {
@@ -35,14 +36,15 @@
 
 /* input */
 .text-input {
-    margin: 5px;
+    margin-top: 5px;
     padding: 8px;
 
-    width: 100%;
+    width: 95%;
 }
 
 /* label */
 .text-label {
+    margin-top: 100px;
     font-weight: bold;
 
 }
@@ -78,5 +80,5 @@ th {
 
 td {
     border-bottom: solid 1px #ccc;
-    padding: 15px;
+    padding: 5px;
 }

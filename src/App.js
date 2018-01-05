@@ -7,7 +7,7 @@ import Home from './Home';
 import PeoplePage from './PeoplePage';
 import Shifts from './Shifts';
 import Schedules from './Schedules';
-import SchedulesNew from './Schedules.New';
+import ScheduleCreate from './Schedule.Create';
 
 import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
 
@@ -20,37 +20,17 @@ class App extends Component {
   //   }));
   // };
 
-  // openDrawer = (event) => {
-  //   event.preventDefault();
-  //   this.setState({isDrawerOpen: true});
-  // }
-
-  // closeDrawer = (event) => {
-  //   event.preventDefault();
-  //   this.setState({isDrawerOpen: false});
-  // }
-
   render() {
     return (
         <div className="App">
           <Router>
             <div className="container">
-                <div className="left-content left-content--naveMenu">
+                <div className="left-content left-content--navMenu">
                     <div className="sideMenu" >
-                        <h3>Schedule Manager</h3>
-                        <ul className="sideNavBar">
-                            <li >
-                                <Link to="/people" >People</Link>
-                            </li>
-                            
-                            <li>
-                                <Link to="/shifts">Shifts</Link>
-                            </li>
-                            
-                            <li>
-                                <Link to="/schedules" >Schedules</Link>
-                            </li>
-                        </ul>
+                        <div className="sideMenu__item"><Link to="/">Schedule Manager</Link></div>
+                        <div className="sideMenu__item"><Link to="/people" >People</Link></div>
+                        <div className="sideMenu__item"><Link to="/shifts">Shifts</Link></div>
+                        <div className="sideMenu__item"><Link to="/schedules" >Schedules</Link></div>
                     </div>
                 </div>
 
@@ -60,7 +40,7 @@ class App extends Component {
                         <Route path="/people" component={ PeoplePage } />
                         <Route path="/shifts" component={ Shifts } />
                         <Route path="/schedules" component={ Schedules } />
-                        <Route path="/schedules/new" component={ SchedulesNew} />
+                        <Route path="/scheduleCreate" component={ScheduleCreate} />
                     </div>
                 </div>
               
