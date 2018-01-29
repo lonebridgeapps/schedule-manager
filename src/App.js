@@ -31,6 +31,7 @@ class App extends Component {
                         <div className="sideMenu__item"><Link to="/people" >People</Link></div>
                         <div className="sideMenu__item"><Link to="/shifts">Shifts</Link></div>
                         <div className="sideMenu__item"><Link to="/schedules" >Schedules</Link></div>
+                        <div className="sideMenu__item sideMenu__item--subItem"><Link to="/scheduleCreate" >Create</Link></div>
                     </div>
                 </div>
 

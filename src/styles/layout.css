@@ -30,7 +30,7 @@
 .card--shift{
     margin: 2px;
     border: solid #ddd 0.5px;
-    min-height: 45px;
+    /* min-height: 45px; */
     min-width: 100px;
     cursor: pointer;
 }
@@ -45,7 +45,7 @@
     margin: 2px;
     border: solid #ddd 0.5px;
     overflow: hidden;
-    min-height: 45px;
+    /* min-height: 45px; */
     min-width: 150px;
     cursor: pointer;
 }
@@ -95,11 +95,6 @@
 .left-content {
     width: auto;
     float: left;
-}
-
-.left-content--navMenu {
-    background-color: #003d66;
-    height: 100vh; 
 }
 
 .button--table-cell{

@@ -3,6 +3,10 @@ import fire from './fire';
 
 import TableSchedules from './table.schedule';
 
+const dontShow = {
+    display: "none",
+}
+
 class ScheduleCreate extends Component {
 
     state = {
@@ -87,11 +91,56 @@ class ScheduleCreate extends Component {
         
             <div className="container">
                 <div className="panel">
+                    <div className="App-form__input-field">
+                        <label htmlFor="startDate" className="text-label">start date</label>
+                        <input
+                            name="startDate"
+                            type="date"
+                            className="text-input"
+                            placeholder="99/99/9999"
+                            value={this.state.scheduleStartDate}
+                            required
+                            />
+                            <button className="button">cal</button>
+                    </div>
+
+                    <div className="App-form__input-field">
+                        <label htmlFor="endDate" className="text-label">end date</label>
+                        <input
+                            name="endDate"
+                            type="date"
+                            className="text-input"
+                            placeholder="99/99/9999"
+                            value={this.state.scheduleEndDate}
+                            required
+                            />
+                            <button className="button">cal</button>
+                    </div>
+
+                    <div className="App-form__input-field">
+                        <label htmlFor="job" className="text-label">job type</label>
+                        <select
+                            name="job"h
+                            className="text-input"
+                            value={this.state.job}
+                            >
+                                <option value={1} label="Server" />
+                                <option value={2} label="Bartender" />
+                                <option value={3} label="Hostess" />
+                        </select>
+                    </div>
+                </div>
+
+                <div className="panel" style={dontShow}>
                     <button type="button" name="btnSaveSchedule" className="button panel-button--right">Save</button>
                     <button type="button" name="btnPrintSchedule" className="button panel-button--right">Print</button>
                 </div> 
 
                 <div className="panel">
+                    Create Schedule (+) (dropdown carrat)
+                </div>
+
+                <div className="panel"> {/*style={dontShow}*/}
                     <TableSchedules 
                         people={this.state.people} 
                         shifts={this.state.shifts} 

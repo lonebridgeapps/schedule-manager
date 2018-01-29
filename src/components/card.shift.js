@@ -11,7 +11,7 @@ const CardShift = (props) => {
                 
                 <div className="left-content" style={details}>
                     <div className="card--text-main">{props.name}</div>
-                    <div className="card--text-sub">{props.details}</div>
+                    {/* <div className="card--text-sub">{props.details}</div> */}
                 </div>
 
                 <div className="left-content">
