@@ -9,31 +9,38 @@ import Shifts from './Shifts';
 import Schedules from './Schedules';
 import ScheduleCreate from './Schedule.Create';
 
-import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
+import Employees from './components/Employees/Employees';
+
+import { NavLink, Link, Route, BrowserRouter as Router } from 'react-router-dom';
 
 
 class App extends Component {
-
-  // insertPerson = (personInfo) => {
-  //   this.setState(prevState => ({
-  //     cards: prevState.card.concat(personInfo)
-  //   }));
-  // };
 
   render() {
     return (
         <div className="App">
           <Router>
             <div className="container">
-                <div className="left-content left-content--navMenu">
-                    <div className="sideMenu" >
-                        <div className="sideMenu__item"><Link to="/">Schedule Manager</Link></div>
-                        <div className="sideMenu__item"><Link to="/people" >People</Link></div>
-                        <div className="sideMenu__item"><Link to="/shifts">Shifts</Link></div>
-                        <div className="sideMenu__item"><Link to="/schedules" >Schedules</Link></div>
-                        <div className="sideMenu__item sideMenu__item--subItem"><Link to="/scheduleCreate" >Create</Link></div>
+                    <div className="left-content navMenu" >
+                        <div className="navMenu__item">
+                            <Link to="/">Schedule Manager</Link>
+                        </div>
+                        <div className="navMenu__item">
+                            <Link to="/people" >People</Link>
+                        </div>
+                        <div className="navMenu__item">
+                            <Link to="/shifts">Shifts</Link>
+                        </div>
+                        <div className="navMenu__item">
+                            <Link to="/schedules" >Schedules</Link>
+                        </div>
+                        <div className="navMenu__item navMenu__item--subItem">
+                            <Link to="/scheduleCreate" >Create</Link>
+                        </div>
+                        <div className="navMenu__item">
+                            <NavLink to="/employees" activeClassName="navMenu__item--active" >Employees</NavLink>
+                        </div>
                     </div>
-                </div>
 
                 <div className="content">
                     <div className="clear-float">
@@ -42,6 +49,7 @@ class App extends Component {
                         <Route path="/shifts" component={ Shifts } />
                         <Route path="/schedules" component={ Schedules } />
                         <Route path="/scheduleCreate" component={ScheduleCreate} />
+                        <Route path="/employees" component={ Employees } />
                     </div>
                 </div>
               

@@ -1,5 +1,5 @@
 /* button */
-.button {
+.button__default {
     padding: 10px 12px;
 
     font-weight: bold;
@@ -10,9 +10,25 @@
     cursor: pointer;
 }
 
-.button:active {
-    color: #ddd;
+.button__default:active {
+    color: #eee;
     background-color: #005c99;
+}
+
+.button__success {
+    padding: 10px 12px;
+
+    font-weight: bold;
+    color: white;
+    background-color: #4ABD7C;
+
+    border: none;
+    cursor: pointer;
+}
+
+.button__success:active {
+    color: #eee;
+    background-color: #248f24;
 }
 
 /* button link */

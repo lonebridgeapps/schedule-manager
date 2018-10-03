@@ -11,6 +11,11 @@
     overflow: hidden;
 }
 
+.panel--right{
+    max-width: 300px;
+     
+}
+
 .panel-button--left{
     float: left;
     margin-right: 10px;
@@ -105,6 +110,15 @@
     float: none;
     width: auto;
     overflow: hidden;
+
+    background-color: #eeeeee;
+    height: 100vh; 
+}
+
+.content-25 {
+    float: left;
+    width: 25%;
+    overflow: hidden;
 }
 
 .content-30 {
@@ -123,6 +137,18 @@
     float: left;
     width: 60%;
     overflow: hidden;
+}
+
+.contentHeaderBar{
+    background-color: #ffffff;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.contentBody {
+    padding: 10px 20px;
 }
 
 .clear-float {
