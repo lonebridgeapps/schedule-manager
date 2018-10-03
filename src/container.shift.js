@@ -4,10 +4,6 @@ import './styles/layout.css';
 import FormShift from './form.shift';
 import TableShift from './table.shift.js';
 
-const fabStyle = {
-
-};
-
 const ShiftContainer = (props) =>{
     return(
         <div>

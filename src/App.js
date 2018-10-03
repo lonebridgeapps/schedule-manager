@@ -4,63 +4,52 @@ import './styles/layout.css';
 import './styles/NavMenu.css';
 
 import Home from './Home';
-import People from './People';
+import PeoplePage from './PeoplePage';
 import Shifts from './Shifts';
 import Schedules from './Schedules';
-import SchedulesNew from './Schedules.New';
+import ScheduleCreate from './Schedule.Create';
 
-import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
+import Employees from './components/Employees/Employees';
+
+import { NavLink, Link, Route, BrowserRouter as Router } from 'react-router-dom';
 
 
 class App extends Component {
-
-  insertPerson = (personInfo) => {
-    this.setState(prevState => ({
-      cards: prevState.card.concat(personInfo)
-    }));
-  };
-
-  openDrawer = (event) => {
-    event.preventDefault();
-    this.setState({isDrawerOpen: true});
-  }
-
-  closeDrawer = (event) => {
-    event.preventDefault();
-    this.setState({isDrawerOpen: false});
-  }
 
   render() {
     return (
         <div className="App">
           <Router>
             <div className="container">
-                <div className="left-content">
-                    <div className="sideMenu" >
-                        <h3>Schedule Manager</h3>
-                        <ul className="sideNavBar">
-                            <li >
-                                <Link to="/people" >People</Link>
-                            </li>
-                            
-                            <li>
-                                <Link to="/shifts">Shifts</Link>
-                            </li>
-                            
-                            <li>
-                                <Link to="/schedules" >Schedules</Link>
-                            </li>
-                        </ul>
+                    <div className="left-content navMenu" >
+                        <div className="navMenu__item">
+                            <Link to="/">Schedule Manager</Link>
+                        </div>
+                        <div className="navMenu__item">
+                            <Link to="/people" >People</Link>
+                        </div>
+                        <div className="navMenu__item">
+                            <Link to="/shifts">Shifts</Link>
+                        </div>
+                        <div className="navMenu__item">
+                            <Link to="/schedules" >Schedules</Link>
+                        </div>
+                        <div className="navMenu__item navMenu__item--subItem">
+                            <Link to="/scheduleCreate" >Create</Link>
+                        </div>
+                        <div className="navMenu__item">
+                            <NavLink to="/employees" activeClassName="navMenu__item--active" >Employees</NavLink>
+                        </div>
                     </div>
-                </div>
 
                 <div className="content">
                     <div className="clear-float">
                         <Route exact path="/" component={ Home } />
-                        <Route path="/people" component={ People } />
+                        <Route path="/people" component={ PeoplePage } />
                         <Route path="/shifts" component={ Shifts } />
                         <Route path="/schedules" component={ Schedules } />
-                        <Route path="/schedules/new" component={ SchedulesNew} />
+                        <Route path="/scheduleCreate" component={ScheduleCreate} />
+                        <Route path="/employees" component={ Employees } />
                     </div>
                 </div>
               

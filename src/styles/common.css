@@ -1,5 +1,5 @@
 /* button */
-.button {
+.button__default {
     padding: 10px 12px;
 
     font-weight: bold;
@@ -7,20 +7,75 @@
     background-color: #006bb3;
 
     border: none;
+    cursor: pointer;
 }
+
+.button__default:active {
+    color: #eee;
+    background-color: #005c99;
+}
+
+.button__success {
+    padding: 10px 12px;
+
+    font-weight: bold;
+    color: white;
+    background-color: #4ABD7C;
+
+    border: none;
+    cursor: pointer;
+}
+
+.button__success:active {
+    color: #eee;
+    background-color: #248f24;
+}
+
+/* button link */
+.linkButton {
+    text-decoration: none;
+    padding: 10px 12px;
+
+    font-size: .9em;
+    font-weight: bold;
+    color: white;
+    background-color: #006bb3;
+
+    border: none;
+}
+
+.linkButton:active {
+    color: #ddd;
+    background-color: #005c99;
+}
+
 
 /* input */
 .text-input {
+    margin-top: 5px;
+    padding: 8px;
+
+    width: 95%;
+}
+
+/* label */
+.text-label {
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+/* select */
+.select-text {
     margin: 5px;
     padding: 8px;
 
     width: 100%;
 }
 
-/* label */
-.text-label {
-    font-weight: bold;
-
+/* option */
+.option-text{
+    font-size: 1em;
 }
 
 /* table */
@@ -41,5 +96,5 @@ th {
 
 td {
     border-bottom: solid 1px #ccc;
-    padding: 15px;
+    padding: 5px;
 }

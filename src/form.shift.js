@@ -5,10 +5,6 @@ import './styles/common.css';
 
 import fire from './fire';
 
-const style = {
-    margin: 12,
-};
-
 class FormShift extends Component {
   state = {
       name: '', 

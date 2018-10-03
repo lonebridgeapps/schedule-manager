@@ -5,19 +5,91 @@
 }
 
 .panel{
-    width: 100%;
-    margin: 10px;
+    margin: 5px;
     padding: 10px;
     border: solid #ddd 0.5px;
     overflow: hidden;
 }
 
+.panel--right{
+    max-width: 300px;
+     
+}
+
 .panel-button--left{
     float: left;
+    margin-right: 10px;
 }
 
 .panel-button--right{
     float: right;
+    margin-left: 10px;
+}
+
+.table--grid {
+    margin: 2px;
+    padding: 5px;
+    border: solid #ddd 0.5px;
+}
+
+.card--shift{
+    margin: 2px;
+    border: solid #ddd 0.5px;
+    /* min-height: 45px; */
+    min-width: 100px;
+    cursor: pointer;
+}
+
+.card--shift--content{
+    padding: 5px;
+    min-height: 35px;
+    text-align: center;
+}
+
+.card--employee-info{
+    margin: 2px;
+    border: solid #ddd 0.5px;
+    overflow: hidden;
+    /* min-height: 45px; */
+    min-width: 150px;
+    cursor: pointer;
+}
+
+.card--employee-info--image{
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    padding: 2px;
+    border: solid #ddd 0.5px;
+}
+
+.card--employee-info--content{
+    margin-left: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+.card--text-main{
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.card--text-sub{
+    font-size: 0.75em;
+}
+
+.card--tag{
+    margin: 5px;
+    padding: 5px 10px;
+    background-color:rgba(0, 0, 0, 0.5);;
+    color: #fff;
+}
+
+.card--icon{
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    padding: 2px;
 }
 
 .right-content {
@@ -30,9 +102,22 @@
     float: left;
 }
 
+.button--table-cell{
+    width: 100%;
+}
+
 .content {
     float: none;
     width: auto;
+    overflow: hidden;
+
+    background-color: #eeeeee;
+    height: 100vh; 
+}
+
+.content-25 {
+    float: left;
+    width: 25%;
     overflow: hidden;
 }
 
@@ -54,6 +139,38 @@
     overflow: hidden;
 }
 
+.contentHeaderBar{
+    background-color: #ffffff;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.contentBody {
+    padding: 10px 20px;
+}
+
 .clear-float {
     clear: both;
+}
+
+@media screen and (max-width: 1024px){
+    .content-30 {
+        float: left;
+        width: 95%;
+        overflow: hidden;
+    }
+
+    .content-50 {
+        float: left;
+        width: 95%;
+        overflow: hidden;
+    }
+    
+    .content-60 {
+        float: left;
+        width: 95%;
+        overflow: hidden;
+    }
 }
